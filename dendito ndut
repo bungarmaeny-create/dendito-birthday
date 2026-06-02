@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 23rd Birthday 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:linear-gradient(135deg,#ffe0f0,#fff3d6);
+text-align:center;
+overflow-x:hidden;
+}
+
+.card{
+max-width:750px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+h1{color:#ff4d88}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:15px;
+}
+
+.hidden{display:none}
+
+#gift{
+margin-top:20px;
+background:#fff0f6;
+padding:15px;
+border-radius:15px;
+}
+
+.confetti{
+position:fixed;
+width:8px;
+height:8px;
+top:-10px;
+animation:fall linear forwards;
+z-index:999;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh) rotate(720deg);}
+}
+
+.small{font-size:13px;color:gray}
+
+.bar{
+height:10px;
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+margin:15px 0;
+}
+
+.progress{
+height:100%;
+width:0%;
+background:#ff4d88;
+transition:0.4s;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<div class="card">
+
+<h1>🎂 DENDITO OS UPDATE</h1>
+
+<p><b>Dendito Ahza Ghulammahdi</b></p>
+
+<p>System menemukan update baru tersedia.</p>
+
+<p class="small">🐱 meow mode: activated</p>
+
+<button onclick="start()">INSTALL UPDATE</button>
+
+<div id="gift" class="hidden">
+
+<h2>🎉 HAPPY 23RD BIRTHDAY 🎉</h2>
+
+<p>
+Selamat ulang tahun 🐱<br>
+Semoga kamu makin kuat, bahagia, dan semua urusan dipermudah.
+</p>
+
+<hr>
+
+<h3>🎁 HADIAH</h3>
+
+<p>✨ +100 Kebahagiaan</p>
+<p>🍀 +100 Keberuntungan</p>
+<p>💪 +100 Kesehatan</p>
+<p>💸 +100 Rezeki</p>
+
+<hr>
+
+<h3>👑 BONUS ITEM</h3>
+
+<p><b>Kurcaci Cantik</b></p>
+
+<p>
+Status: Langka ⭐⭐⭐⭐⭐<br>
+Tinggi: Rahasia Negara<br>
+Skill: Bikin senyum tiba-tiba
+</p>
+
+<p class="small">
+“tidak bisa dikembalikan, tapi efek bahagianya permanen”
+</p>
+
+<br>
+
+<h3>🐱 SYSTEM MESSAGE</h3>
+
+<p>Update: SUCCESS</p>
+<p>Doa terkirim ke semesta ✨</p>
+
+<h3>🌱 Welcome to Chapter 23</h3>
+
+<p><b>Regards, Kurcaci Cantik 🤍</b></p>
+
+</div>
+
+</div>
+
+<script>
+function start(){
+
+document.getElementById("music").play().catch(()=>{});
+
+document.getElementById("gift").classList.remove("hidden");
+
+for(let i=0;i<100;i++){
+let d=document.createElement("div");
+d.classList.add("confetti");
+d.style.left=Math.random()*100+"vw";
+d.style.background="hsl("+Math.random()*360+",100%,60%)";
+d.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(d);
+
+setTimeout(()=>d.remove(),5000);
+}
+
+}
+</script>
+
+</body>
+</html>
